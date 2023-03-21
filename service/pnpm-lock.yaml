@@ -11,6 +11,7 @@ specifiers:
   express: ^4.18.2
   isomorphic-fetch: ^3.0.0
   node-fetch: ^3.3.0
+  nodemailer: ^6.9.1
   rimraf: ^4.3.0
   socks-proxy-agent: ^7.0.0
   tsup: ^6.6.3
@@ -23,6 +24,7 @@ dependencies:
   express: 4.18.2
   isomorphic-fetch: 3.0.0
   node-fetch: 3.3.0
+  nodemailer: 6.9.1
   socks-proxy-agent: 7.0.0
 
 devDependencies:
@@ -2626,6 +2628,11 @@ packages:
       data-uri-to-buffer: 4.0.1
       fetch-blob: 3.2.0
       formdata-polyfill: 4.0.10
+    dev: false
+
+  /nodemailer/6.9.1:
+    resolution: {integrity: sha512-qHw7dOiU5UKNnQpXktdgQ1d3OFgRAekuvbJLcdG5dnEo/GtcTHRYM7+UfJARdOFU9WUQO8OiIamgWPmiSFHYAA==}
+    engines: {node: '>=6.0.0'}
     dev: false
 
   /normalize-package-data/2.5.0:

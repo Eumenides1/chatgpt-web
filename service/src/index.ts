@@ -2,6 +2,7 @@ import express from 'express'
 import type { ChatContext, ChatMessage } from './chatgpt'
 import { chatConfig, chatReplyProcess } from './chatgpt'
 import { auth } from './middleware/auth'
+import { sendRandomNumberToEmail } from './utils/index'
 
 const app = express()
 const router = express.Router()
@@ -46,8 +47,9 @@ router.post('/config', async (req, res) => {
 })
 
 router.post('/sendEmail', async (req, res) => {
-	// 这里自行添加发送邮寄逻辑
-	res.send({ status: 'Success', message: '尊敬的用户，您当前正在注册或登录网站，验证码为：849273，有效期为 10 分钟', data: {  } })
+  sendRandomNumberToEmail('1763077056@qq.com')
+  // 这里自行添加发送邮寄逻辑
+  res.send({ status: 'Success', message: '尊敬的用户，您当前正在注册或登录网站，验证码为：849273，有效期为 10 分钟', data: { } })
 })
 
 app.use('', router)

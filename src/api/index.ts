@@ -29,39 +29,39 @@ export function fetchChatAPIProcess<T = any>(
 }
 
 export function fetchChatConfig<T = any>() {
-	return post<T>({
-		url: '/config',
-	})
+  return post<T>({
+    url: '/config',
+  })
 }
 
 export function sendEmail<T = any>(
-	email: string,
-	token: string
+  email: string,
+  token: string,
 ) {
-	return post<T>({
-		url: '/sendMail',
-		data: {email, token},
-	})
+  return post<T>({
+    url: '/sendMail',
+    data: { email, token },
+  })
 }
 
 export function accountLogin<T = any>(
-	email: string,
-	code: string
+  email: string,
+  code: string,
 ) {
-	return post<T>({
-		url: '/login',
-		data: {email, code},
-	})
+  return post<T>({
+    url: '/login',
+    data: { email, code },
+  })
 }
 
 export function accountlogout<T = any>() {
-	return get<T>({
-		url: '/logout',
-	})
+  return get<T>({
+    url: '/logout',
+  })
 }
 
 export function fetchUsetInfo<T = any>() {
-	return get<T>({
-		url: '/user'
-	})
+  return get<T>({
+    url: '/user',
+  })
 }
